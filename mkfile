@@ -1,10 +1,10 @@
-</$objtype/mkfile
+<$PLAN9/src/mkhdr
 
 CFLAGS=-p -Iinclude -w
 LIB=libfreetype.a
 
 TARG=ttf2subf
-BIN=/$objtype/bin
+BIN=/$PLAN9/bin
 MANPAGE=freetype
 
 OFILES=\
@@ -101,7 +101,7 @@ OFILES=\
 all:V: $LIB $TARG
 
 $LIB:	$OFILES
-	ar vu $LIB $newprereq
+#	ar vu $LIB $newprereq
 #	cp $LIB /$objtype/lib
 
 $TARG:	$LIB main.$O
